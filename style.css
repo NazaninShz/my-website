@@ -1,0 +1,295 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+  background-color: #004080;
+  padding: 15px 12px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+  display: inline-block;
+  white-space: nowrap;   /* Prevent text wrapping */
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #004080;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 15px;
+  font-size: 14px; 
+}
+
+/* Teaching (courses list) */
+.courses {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 700px;
+  font-size: 12px; 
+}
+
+.courses li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 12px; 
+}
+
+.course-title {
+  font-weight: normal;
+  font-size: 12px; 
+}
+
+.course-year {
+  color: #2d10c0;
+  font-style: italic;
+  font-size: 12px; 
+}
+
+/* Research list */
+.research-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+.research-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.research-title {
+  max-width: 75%;
+}
+
+.research-year a {
+  color: gray;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.research-year a:hover {
+  color: #004080;
+}
+
+/* Paper toggle details */
+.paper {
+  margin: 20px auto;
+  max-width: 700px;
+  font-size: 14px; 
+}
+
+.paper-title {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* About section */
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.about-card {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Education list */
+.education {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 700px;
+  font-size: 12px; 
+}
+
+.education li {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+  width: 100%;
+}
+
+.degree {
+  font-weight: bold;
+  flex: 1; 
+}
+
+.edu-year {
+  color: gray;
+  font-style: italic;
+  text-align: right;     /* push text to right */
+  min-width: 120px; 
+}
+
+.school {
+  width: 100%;
+  margin-left: 10px;
+  color: #555;
+}
+
+.home-links {
+  list-style: disc;
+  padding-left: 20px;
+  text-align: left;
+  margin: 20px 0;
+  display: block;
+  font-size: 14px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.home-links li {
+  margin: 8px 0;
+  display: list-item;
+}
+
+.home-links a {
+  display: inline;
+  padding: 0;
+  background: none;
+  color: #004080;
+  text-decoration: none;
+  font-weight: normal;
+  border-radius: 0;
+  font-size: 14px;
+}
+
+.home-links a:hover {
+  background: none;
+  text-decoration: underline;
+  color: #0066cc;
+}
+
+.toggle-btn {
+  font-size: 12px;
+  padding: 4px 8px;
+  background: #004080;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background: #0066cc;
+}
+.top-section {
+  display: flex;
+  align-items: stretch;  /* both columns equal height */
+  gap: 0;             /* spacing between photo and text */
+  margin: 20px;
+}
+
+.top-photo {
+  flex: 1;               /* take half the width */
+  overflow: hidden;
+  display: flex;         /* Center image vertically */
+  align-items: center;   /* Center image vertically */
+  justify-content: center; /* Center image horizontally */
+}
+
+.top-photo .profile-pic {
+  width: 50%;
+  height: auto;          /* Maintain aspect ratio */
+  object-fit: cover;     /* Fill the container */
+  object-position: center; /* Centers the image */
+  border: none;          /* Remove blue border */
+  border-radius: 12px;
+  padding: 5px;
+  background-color: #696969;  /* Dim gray - much darker */
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  display: block;        /* Remove any inline spacing */
+}
+
+.top-info {
+  flex: 1;               /* other half of width */
+  padding: 0;
+  margin-left: -200px;    /* Pull text closer to image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;    /* Center the content blocks */
+}
+
+.top-info h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.bio {
+  text-align: left;       /* Left align text within the block */
+  line-height: 1.8;
+  font-size: 16px;
+  margin: 5px 0;         /* Remove auto centering */
+  max-width: 600px;
+  width: 100%;            /* Take full width available */
+}
+
+.contact-footer {
+  background-color: #004080;   /* same as nav */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.contact-footer a {
+  color: #ffcc00;              /* highlight email */
+  text-decoration: none;
+}
+
+.contact-footer a:hover {
+  text-decoration: underline;
+}
