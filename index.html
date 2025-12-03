@@ -1,45 +1,318 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Nazanin Website</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="resume.html">Resume</a>
-      <a href="projects.html">Experience</a>
-      <a href="education.html">Education</a>
-      <a href="links.html">Links</a>
-    </nav>
-    <hr>
-<div class="top-section">
-  <div class="top-photo">
-    <img src="me2.jpg" alt="My photo" class="profile-pic">
-  </div>
-  <div class="top-info">
-    
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
 
-    <h2>Nazanin Shirazian </h2>
-    <p class="bio">
-      Nazanin Shirazian is an Investment analyst with a track record of supporting large-scale portfolios and high-profile transactions, combining technical expertise with strong interpersonal and organizational skills. I excel in fast-moving environments, bringing discipline, adaptability, and a collaborative mindset. Hard-working and open to new experiences, I enjoy taking on responsibility, leading initiatives, and translating complex analysis into actionable strategies for diverse stakeholders.
-    </p>
+/* Navigation */
+nav {
+  background-color: #004080;
+  padding: 15px 12px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
 
-    <ul class="home-links">
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="projects.html">Experience</a></li>
-      <li><a href="education.html">Education</a></li>
-    </ul>
-  </div>
-</div>
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+  display: inline-block;
+  white-space: nowrap;   /* Prevent text wrapping */
+}
 
-   <footer class="contact-footer">
-  <p>
-    Phone: +49 15166149189 <br>
-    Email: <a href="mailto:nazanin.sh70@gmail.com">nazanin.sh70@gmail.com</a> <br>
-    LinkedIn: <a href="https://www.linkedin.com/in/nshirazian/" target="_blank">linkedin.com/in/nshirazian</a>
-  </p>
-</footer>
+nav a:hover {
+  text-decoration: underline;
+}
 
-  </body>
-</html>
+/* Headings */
+h1, h2, h3 {
+  color: #004080;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 15px;
+  font-size: 14px; 
+}
+
+/* Teaching (courses list) */
+.courses {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 700px;
+  font-size: 12px; 
+}
+
+.courses li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 12px; 
+}
+
+.course-title {
+  font-weight: normal;
+  font-size: 12px; 
+}
+
+.course-year {
+  color: #2d10c0;
+  font-style: italic;
+  font-size: 12px; 
+}
+
+/* Research list */
+.research-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+.research-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.research-title {
+  max-width: 75%;
+}
+
+.research-year a {
+  color: gray;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.research-year a:hover {
+  color: #004080;
+}
+
+/* Paper toggle details */
+.paper {
+  margin: 20px auto;
+  max-width: 700px;
+  font-size: 14px; 
+}
+
+.paper-title {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* About section */
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.about-card {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Education list */
+.education {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 700px;
+  font-size: 12px; 
+}
+
+.education li {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+  width: 100%;
+}
+
+.degree {
+  font-weight: bold;
+  flex: 1; 
+}
+
+.edu-year {
+  color: gray;
+  font-style: italic;
+  text-align: right;     /* push text to right */
+  min-width: 120px; 
+}
+
+.school {
+  width: 100%;
+  margin-left: 10px;
+  color: #555;
+}
+
+.home-links {
+  list-style: disc;
+  padding-left: 20px;
+  text-align: left;
+  margin: 20px 0;
+  display: block;
+  font-size: 14px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.home-links li {
+  margin: 8px 0;
+  display: list-item;
+}
+
+.home-links a {
+  display: inline;
+  padding: 0;
+  background: none;
+  color: #004080;
+  text-decoration: none;
+  font-weight: normal;
+  border-radius: 0;
+  font-size: 14px;
+}
+
+.home-links a:hover {
+  background: none;
+  text-decoration: underline;
+  color: #0066cc;
+}
+
+.toggle-btn {
+  font-size: 12px;
+  padding: 4px 8px;
+  background: #004080;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background: #0066cc;
+}
+.top-section {
+  display: flex;
+  align-items: stretch;  /* both columns equal height */
+  gap: 0;             /* spacing between photo and text */
+  margin: 20px;
+}
+
+.top-photo {
+  flex: 1;               /* take half the width */
+  overflow: hidden;
+  display: flex;         /* Center image vertically */
+  align-items: center;   /* Center image vertically */
+  justify-content: center; /* Center image horizontally */
+}
+
+.top-photo .profile-pic {
+  width: 50%;
+  height: auto;          /* Maintain aspect ratio */
+  object-fit: cover;     /* Fill the container */
+  object-position: center; /* Centers the image */
+  border: none;          /* Remove blue border */
+  border-radius: 12px;
+  padding: 5px;
+  background-color: #696969;  /* Dim gray - much darker */
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  display: block;        /* Remove any inline spacing */
+}
+
+.top-info {
+  flex: 1;               /* other half of width */
+  padding: 0;
+  margin-left: -200px;    /* Pull text closer to image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;    /* Center the content blocks */
+}
+
+.top-info h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.bio {
+  text-align: left;       /* Left align text within the block */
+  line-height: 1.8;
+  font-size: 16px;
+  margin: 5px 0;         /* Remove auto centering */
+  max-width: 600px;
+  width: 100%;            /* Take full width available */
+}
+
+.contact-footer {
+  background-color: #004080;   /* same as nav */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.contact-footer a {
+  color: #ffcc00;              /* highlight email */
+  text-decoration: none;
+}
+
+.contact-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .top-photo .profile-pic {
+    width: 60%;
+    max-width: 250px;
+  }
+  
+  .top-info {
+    margin-left: 0;  /* Remove negative margin on mobile */
+    padding: 0 20px;
+  }
+  
+  .bio {
+    font-size: 14px;
+  }
+}
